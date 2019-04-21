@@ -1,6 +1,6 @@
 The function below ilustrates us all the data from any Http Response. As a parameter it takes the content i.e. `Task<HttpResponseMessage>`. This method is static and asynchronous one. I have extract all the possible data which may be given to HttpClient as a response to his/her queries.
 
-```c#
+```javascript
         async static void ShowContent(Task<HttpResponseMessage> content)
         {
             Console.WriteLine("Http Version: " + content.Result.Version + "\n");
@@ -59,7 +59,7 @@ The function below ilustrates us all the data from any Http Response. As a param
 
 In order to process the GET request response:
 
-```c#
+```javascript
  static async Task<HttpResponseMessage> HttpGetRequest_response(string url)
 {
     using (HttpClient client = new HttpClient())
@@ -76,7 +76,7 @@ All this method needs is an URL to web resource. Inside the method I'm crearing 
 
 As a result the method returns the response on client's request.
 
-```c#
+```javascript
 string url = "https://httpbin.org/get";
  // full data on GET request
 using (var content = HttpGetRequest_response(url))
@@ -93,7 +93,7 @@ _For another requests the logic is the same, but the main difference is that som
 
 _**POST**_
 
-```c#
+```javascript
 static async Task<HttpResponseMessage> HttpPostRequest_response(string url, List<KeyValuePair<string, string>> iterable)
 {
     using (HttpClient client = new HttpClient())
@@ -109,7 +109,7 @@ static async Task<HttpResponseMessage> HttpPostRequest_response(string url, List
 
 _**DELETE**_
 
-```c#
+```javascript
 static async Task<HttpResponseMessage> HttpDeleteRequest_response(string url)
 {
     using (HttpClient client = new HttpClient())
@@ -122,7 +122,7 @@ static async Task<HttpResponseMessage> HttpDeleteRequest_response(string url)
 
 _**PUT**_
 
-```c#
+```javascript
 static async Task<HttpResponseMessage> HttpPutRequest_response(string url, List<KeyValuePair<string, string>> iterable)
 {
     using (HttpClient client = new HttpClient())
@@ -138,7 +138,7 @@ static async Task<HttpResponseMessage> HttpPutRequest_response(string url, List<
 
 Calling methods in the programm:
 
-```c#
+```javascript
         static void Main(string[] args)
         {
             string url = "https://httpbin.org/get";
@@ -488,6 +488,6 @@ Server: nginx
 
 
 ======================================================================
-
-
 ```
+
+https://github.com/VladGanuscheak/Network_Programming/tree/dev/Lab_3
